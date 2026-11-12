@@ -27,9 +27,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-border {
-            border-image: linear-gradient(to bottom right, var(--gold), #222) 1;
-        }
         .glass-card {
             background: rgba(12, 12, 12, 0.75);
             backdrop-filter: blur(12px);
@@ -40,7 +37,6 @@
             border-color: var(--gold);
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
         }
-        /* Canvas achtergrond */
         #particle-canvas {
             position: fixed;
             top: 0;
@@ -50,7 +46,6 @@
             pointer-events: none;
             z-index: 0;
         }
-        /* Marquee ticker */
         @keyframes marquee {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
@@ -60,7 +55,6 @@
             width: 200%;
             animation: marquee 25s linear infinite;
         }
-        /* Shimmer effect op knoppen */
         .shimmer-btn {
             position: relative;
             overflow: hidden;
@@ -106,7 +100,8 @@
             
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
                 <a href="#features" class="hover:text-yellow-400 transition-colors">Overheid</a>
-                <a href="#rules" class="hover:text-yellow-400 transition-colors">APV & Regels</a>
+                <a href="#donate" class="hover:text-yellow-400 transition-colors">Donaties</a>
+                <a href="#rules" class="hover:text-yellow-400 transition-colors">Regels</a>
                 <a href="#discord" class="hover:text-yellow-400 transition-colors">Discord</a>
             </div>
 
@@ -200,43 +195,120 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Politie -->
-            <div class="glass-card p-8 rounded-2xl group tilt-card">
+            <div class="glass-card p-8 rounded-2xl group">
                 <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
                 <h3 class="font-cinzel text-2xl font-bold mb-3 text-white">Politie Korps</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Handhaaf de orde in Los Santos, voer tactische controles uit en bescherm de burgers tegen de onderwereld.</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Handhaaf de orde in Los Santos, voer tactische controles uit en bescherm de burgers.</p>
                 <a href="https://discord.gg/RXGeEJmAr" target="_blank" class="inline-flex items-center space-x-2 text-yellow-400 text-sm font-semibold hover:text-yellow-300">
                     <span>Solliciteer nu</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
 
-            <!-- DSI -->
-            <div class="glass-card p-8 rounded-2xl group tilt-card border-yellow-500/40 bg-yellow-500/5">
+            <div class="glass-card p-8 rounded-2xl group border-yellow-500/40 bg-yellow-500/5">
                 <div class="w-14 h-14 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-crosshairs"></i>
                 </div>
                 <h3 class="font-cinzel text-2xl font-bold mb-3 text-white">DSI Interventie</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">De elite eenheid voor gijzelingen, zware overvallen en high-risk operaties met exclusieve voertuigen.</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">De elite eenheid voor gijzelingen, zware overvallen en high-risk operaties.</p>
                 <a href="https://discord.gg/RXGeEJmAr" target="_blank" class="inline-flex items-center space-x-2 text-yellow-400 text-sm font-semibold hover:text-yellow-300">
                     <span>Solliciteer nu</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
 
-            <!-- Ambulance -->
-            <div class="glass-card p-8 rounded-2xl group tilt-card">
+            <div class="glass-card p-8 rounded-2xl group">
                 <div class="w-14 h-14 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-kit-medical"></i>
                 </div>
                 <h3 class="font-cinzel text-2xl font-bold mb-3 text-white">Ambulance Zorg</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Red levens op straat, verleen snelle medische hulp en zorg dat gewonden er weer bovenop komen.</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Red levens op straat, verleen snelle medische hulp en reanimeer gewonden.</p>
                 <a href="https://discord.gg/RXGeEJmAr" target="_blank" class="inline-flex items-center space-x-2 text-yellow-400 text-sm font-semibold hover:text-yellow-300">
                     <span>Solliciteer nu</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donaties & Store Sectie + Top Donateurs -->
+    <section id="donate" class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="font-cinzel text-3xl md:text-4xl font-bold mb-4">DONATIES & WEBSTORE</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-4"></div>
+            <p class="text-gray-400 max-w-xl mx-auto">Steun Olympus RP en krijg unieke voordelen in-game of in onze Discord. Bekijk onze topdonateurs!</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Donatie Informatie / Knoppen -->
+            <div class="glass-card p-8 rounded-3xl border-yellow-500/30 flex flex-col justify-between h-full">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-xl mb-6">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-cinzel text-2xl font-bold mb-4 text-white">Waarom doneren?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Alle inkomsten uit donaties gaan direct naar de kosten van de serverhosting (beter presterende, snellere servers) en custom scripts om de RP voor iedereen nóg vetter te maken.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-yellow-400"></i><span>Exclusieve Discord Donateur Rol</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-yellow-400"></i><span>Voorrang bij queue tijdens drukte</span></li>
+                        <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-yellow-400"></i><span>Toegang tot unieke voertuigen & kleding</span></li>
+                    </ul>
+                </div>
+                <a href="https://discord.gg/RXGeEJmAr" target="_blank" class="shimmer-fn shimmer-btn w-full py-4 rounded-xl text-center text-sm uppercase tracking-wider flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>BEKIJK DE STORE / DONEER</span>
+                </a>
+            </div>
+
+            <!-- Top Donateurs Podium -->
+            <div class="glass-card p-8 rounded-3xl border-yellow-500/30">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-cinzel text-2xl font-bold text-white">TOP DONATEURS</h3>
+                    <span class="px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold tracking-widest uppercase">Maandelijkse Erelijst</span>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- #1 Plek -->
+                    <div class="flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-yellow-500/20 to-transparent border border-yellow-500/40">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-400 text-black flex items-center justify-center font-black font-cinzel text-lg shadow-lg shadow-yellow-500/30">1</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Nog beschikbaar</h4>
+                                <p class="text-xs text-yellow-400 font-medium">Claim de 1e plek!</p>
+                            </div>
+                        </div>
+                        <div class="font-cinzel text-yellow-400 font-bold text-sm">€ --,--</div>
+                    </div>
+
+                    <!-- #2 Plek -->
+                    <div class="flex items-center justify-between p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-zinc-300 text-black flex items-center justify-center font-black font-cinzel text-lg">2</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Nog beschikbaar</h4>
+                                <p class="text-xs text-gray-400 font-medium">Claim de 2e plek!</p>
+                            </div>
+                        </div>
+                        <div class="font-cinzel text-gray-300 font-bold text-sm">€ --,--</div>
+                    </div>
+
+                    <!-- #3 Plek -->
+                    <div class="flex items-center justify-between p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-700 text-white flex items-center justify-center font-black font-cinzel text-lg">3</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Nog beschikbaar</h4>
+                                <p class="text-xs text-gray-400 font-medium">Claim de 3e plek!</p>
+                            </div>
+                        </div>
+                        <div class="font-cinzel text-amber-600 font-bold text-sm">€ --,--</div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-6">Wil je ook op de erelijst? Doneer via onze Discord en je naam verschijnt hier automatisch!</p>
             </div>
         </div>
     </section>
@@ -253,7 +325,7 @@
                 <div class="flex items-start space-x-4 p-4 rounded-xl bg-black/40 border border-zinc-800">
                     <div class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold flex-shrink-0">1</div>
                     <div>
-                        <h4 class="font-bold text-white mb-1">Waarde van je Leven (NLR / Val)</h4>
+                        <h4 class="font-bold text-white mb-1">Waarde van je Leven</h4>
                         <p class="text-gray-400">Je karakter is kwetsbaar. Waardeer je leven te allen tijde in bedreigende situaties.</p>
                     </div>
                 </div>
@@ -262,7 +334,7 @@
                     <div class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold flex-shrink-0">2</div>
                     <div>
                         <h4 class="font-bold text-white mb-1">Geen RDM of VDM</h4>
-                        <p class="text-gray-400">Het willekeurig neerschieten of aanrijden van spelers zonder geldige RP-reden is ten strengste verboden.</p>
+                        <p class="text-gray-400">Het willekeurig neerschieten of aanrijden van spelers zonder geldige RP-reden is verboden.</p>
                     </div>
                 </div>
 
@@ -270,7 +342,7 @@
                     <div class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold flex-shrink-0">3</div>
                     <div>
                         <h4 class="font-bold text-white mb-1">Respect & Professionaliteit</h4>
-                        <p class="text-gray-400">Behandel staffleden en medespelers met respect, zowel in-game als op de Discord server.</p>
+                        <p class="text-gray-400">Behandel staffleden en medespelers met respect, zowel in-game als op de Discord.</p>
                     </div>
                 </div>
 
@@ -278,7 +350,7 @@
                     <div class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold flex-shrink-0">4</div>
                     <div>
                         <h4 class="font-bold text-white mb-1">Geen Exploits of Cheats</h4>
-                        <p class="text-gray-400">Het gebruik van externe hulpmiddelen of bugs om voordeel te behalen leidt tot een permanente ban.</p>
+                        <p class="text-gray-400">Het gebruik van bugs of externe hulpmiddelen leidt tot een permanente ban.</p>
                     </div>
                 </div>
             </div>
@@ -319,7 +391,6 @@
 
     <!-- Scripts -->
     <script>
-        // IP Kopiëren functie
         function copyIp() {
             const ip = "31.56.25.7:30120";
             navigator.clipboard.writeText(ip);
@@ -330,7 +401,6 @@
             }, 2000);
         }
 
-        // Canvas Partikels / Gouden vonken
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
